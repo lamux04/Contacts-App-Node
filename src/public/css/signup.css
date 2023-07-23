@@ -1,0 +1,78 @@
+h1 {
+  text-align: center;
+  border-bottom: 2px solid #5c9c5d;
+  padding: 20px;
+}
+
+form {
+  border: 3px solid #5c9c5d;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  height: 550px;
+  margin: 0 auto;
+  padding: 35px 0;
+}
+form a {
+  color: #a9c1ac;
+  transition: color 0.3s;
+}
+form a:hover {
+  color: #5c9c5d;
+  transition: color 0.3s;
+}
+form h2 {
+  font-size: 32px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #a9c1ac;
+  color: #a9c1ac;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 15px;
+  color: #a9c1ac;
+}
+form label input {
+  border: none;
+  padding: 7px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  background-color: #5c9c5d;
+  color: #232940;
+  transition: background-color 0.3s;
+}
+form label input:focus {
+  color: #a9c1ac;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+form .button {
+  background-color: #5c9c5d;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  color: #232940;
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+form .button:hover {
+  cursor: pointer;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+
+/*# sourceMappingURL=signup.css.map */

@@ -1,0 +1,25 @@
+<h1>Contacts App</h1>
+<form action="/signup" method="post">
+    <h2>Sign up</h2>
+    <p>¿Ya tienes cuenta? <a href="/login">Sign in</a></p>
+    {{#if warning}}
+    <p class="warning">El usuario ya existe</p>
+    {{/if}}
+    <label for="username">
+        Username
+        <input type="text" name="username" id="username" required>
+    </label>
+    <label for="password">
+        Password
+        <input type="password" name="password" id="password" required>
+    </label>
+    <label for="fullname">
+        Full name
+        <input type="text" name="fullname" id="fullname">
+    </label>
+    <label for="phoneNumber">
+        Phone number
+        <input type="tel" name="phoneNumber" id="phoneNumber">
+    </label>
+    <input class="button" type="submit" value="Enviar">
+</form>

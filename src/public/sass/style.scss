@@ -1,0 +1,11 @@
+@import 'variables';
+
+body {
+    background-color: $backgroundColor;
+    color: $primaryColor;
+    font-family: $font;
+}
+
+.warning {
+    color: #c53d3d; 
+}

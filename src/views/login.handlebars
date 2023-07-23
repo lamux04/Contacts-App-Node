@@ -1,0 +1,17 @@
+<h1>Contacts App</h1>
+<form>
+    <h2>Login</h2>
+    <p>¿No tienes cuenta? <a href="/signup">Sign Up</a></p>
+    {{#if warning}}
+    <p class="warning">El nombre de usuario o contraseña no es correcto</p>
+    {{/if}}
+    <label for="username">
+        Username
+        <input type="text" name="username" id="username">
+    </label>
+    <label for="password">
+        Password
+        <input type="password" name="password" id="password">
+    </label>
+    <input class="button" type="submit" value="Enviar">
+</form>
