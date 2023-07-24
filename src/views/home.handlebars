@@ -1,0 +1,58 @@
+<h1>Contacts App</h1>
+<header>
+    <input type="button" value="Agregar contacto" id="appendContactB">
+    <div class="options">
+        <a href="/perfil">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</header>
+
+<aside class="append-contact">
+    <h2>Agregar contacto</h2>
+    <form action="/append" method="post">
+        <label for="firstname">
+            Nombre
+            <input type="text" name="firstname" id="firstname">
+        </label>
+        <label for="lastname">
+            Apellidos
+            <input type="text" name="lastname" id="lastname">
+        </label>
+        <label for="phoneNumber">
+            Phone number
+            <input type="tel" name="phoneNumber" id="phoneNumber">
+        </label>
+        <label for="address">
+            Direccion
+            <input type="text" name="address" id="address">
+        </label>
+        <label for="birthday">
+            Cumpleaños
+            <input type="date" name="birthday" id="birthday">
+        </label>
+        <input type="submit" value="Enviar">
+    </form>
+</aside>
+
+<main>
+{{#each contact}}
+    <div class="contact">
+        <div class="name">{{firstName}} {{lastName}}</div>
+        <div class="phone">{{phoneNumber}}</div>
+        <div class="address">{{address}}</div>
+        <div class="birtyday">{{birthday}}</div>
+        <div class="buttons">
+            <form action="/delete/{{id}}" method="post">
+                <input type="submit" value="Delete">
+            </form>
+            <form action="/edit/{{id}}" method="post">
+                <input type="submit" value="Edit">
+            </form>
+        </div>
+        <div class="time-ago">{{date_at}}</div>
+    </div>
+{{/each}}
+</main>
+
+<script src="./js/home.frontend.js"></script>

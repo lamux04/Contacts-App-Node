@@ -1,0 +1,160 @@
+h1 {
+  position: absolute;
+  text-align: center;
+  width: 99vw;
+  z-index: -100;
+}
+
+header {
+  height: 100px;
+  border-bottom: 2px solid #5c9c5d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+header input {
+  background-color: #5c9c5d;
+  color: #232940;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+header input:hover {
+  cursor: pointer;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+header a {
+  color: #5c9c5d;
+}
+header i {
+  font-size: 45px;
+  transition: color 0.3s;
+}
+header i:hover {
+  cursor: pointer;
+  color: #324e32;
+  transition: color 0.3s;
+}
+
+.append-contact {
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  border-right: 2px solid #5c9c5d;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+.append-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.append-contact form label {
+  display: flex;
+  flex-direction: column;
+}
+.append-contact form input[type=text],
+.append-contact form input[type=tel],
+.append-contact form input[type=date] {
+  border: none;
+  padding: 7px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  outline: none;
+  background-color: #5c9c5d;
+  color: #232940;
+  transition: background-color 0.3s;
+  width: 318px;
+}
+.append-contact form input[type=text]:focus,
+.append-contact form input[type=tel]:focus,
+.append-contact form input[type=date]:focus {
+  color: #a9c1ac;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+.append-contact form input[type=submit] {
+  background-color: #5c9c5d;
+  color: #232940;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  margin: 15px 0;
+  transition: background-color 0.3s;
+}
+.append-contact form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.contact {
+  border: 2px solid #5c9c5d;
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  color: #a9c1ac;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+}
+.contact .name {
+  font-size: 24px;
+  border-bottom: 2px solid #a9c1ac;
+  margin-bottom: 5px;
+}
+.contact .time-ago {
+  align-self: flex-end;
+  color: #5c9c5d;
+  font-size: 14px;
+}
+.contact .buttons {
+  display: flex;
+  gap: 15px;
+}
+.contact .buttons input {
+  background-color: #5c9c5d;
+  color: #232940;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  margin: 15px 0;
+  transition: background-color 0.3s;
+}
+.contact .buttons input:hover {
+  cursor: pointer;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+
+/*# sourceMappingURL=home.css.map */

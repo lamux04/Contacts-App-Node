@@ -1,0 +1,175 @@
+@import 'variables';
+
+h1 {
+    position: absolute;
+    text-align: center;
+    width: 99vw;
+    z-index: -100;
+}
+
+header {
+    height: 100px;
+    border-bottom: 2px solid $primaryColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+
+    input {
+        background-color: $primaryColor;
+        color: $backgroundColor;
+        font-weight: 600;
+        border: none;
+        border-radius: 10px;
+        font-family: $font;
+        font-size: 20px;
+        padding: 10px 20px;
+        transition: background-color .3s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $secondColor;
+            transition: background-color .3s;
+        }
+    }
+
+    a {
+        color: $primaryColor;
+    }
+
+    i {
+        font-size: 45px;
+        transition: color .3s;
+
+        &:hover {
+            cursor: pointer;
+            color: $secondColor;
+            transition: color .3s;
+        }
+    }
+}
+
+.append-contact {
+    width: 400px;
+    height: 100vh;
+    position: absolute;
+    border-right: 2px solid $primaryColor;
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"] {
+            border: none;
+            padding: 7px;
+            font-family: $font;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            outline: none;
+            background-color: $primaryColor;
+            color: $backgroundColor;
+            transition: background-color .3s;
+            width: 318px;
+
+            &:focus {
+                color: $thirdColor;
+                background-color: $secondColor;
+                transition: background-color .3s;
+            }
+        }
+
+        input[type="submit"] {
+            background-color: $primaryColor;
+            color: $backgroundColor;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            font-family: $font;
+            font-size: 18px;
+            padding: 10px;
+            width: 150px;
+            margin: 15px 0;
+            transition: background-color .3s;
+            
+    
+            &:hover {
+                cursor: pointer;
+                background-color: $secondColor;
+                transition: background-color .3s;
+            }
+        }
+    }
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.contact {
+    border: 2px solid $primaryColor;
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    color: $thirdColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 18px;
+
+    .name {
+        font-size: 24px;
+        border-bottom: 2px solid $thirdColor;
+        margin-bottom: 5px;
+    }
+
+    .time-ago {
+        align-self: flex-end;
+        color: $primaryColor;
+        font-size: 14px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+        input {
+            background-color: $primaryColor;
+            color: $backgroundColor;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            font-family: $font;
+            font-size: 18px;
+            padding: 10px;
+            width: 150px;
+            margin: 15px 0;
+            transition: background-color .3s;
+            
+    
+            &:hover {
+                cursor: pointer;
+                background-color: $secondColor;
+                transition: background-color .3s;
+            }
+        }
+    }
+}

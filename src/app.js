@@ -37,6 +37,61 @@ app.use(express.urlencoded({ extended: true }));
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/login.routes'));
 
+// PROBANDO
+app.get('/home', (req, res) => {
+    res.render('home', {
+        stylesheet: 'css/home',
+        contact: [
+            {
+                id: 1,
+                firstName: 'Javier',
+                lastName: 'Labrador Munoz',
+                phoneNumber: '672663446',
+                address: 'c/ Fuerteventura 27, Jerez, Cadiz, 11406',
+                birthday: '2004-06-25',
+                date_at: 'today'
+            },
+            {
+                id: 2,
+                firstName: 'Javier',
+                lastName: 'Labrador Munoz',
+                phoneNumber: '672663446',
+                address: null,
+                birthday: '2004-06-25',
+                date_at: '3 days ago'
+            },
+            {
+                id: 3,
+                firstName: 'Javier',
+                lastName: 'Labrador Munoz',
+                phoneNumber: '672663446',
+                address: 'c/ Fuerteventura 27, Jerez, Cadiz, 11406',
+                birthday: null,
+                date_at: '5 days ago'
+            },
+            {
+                id: 4,
+                firstName: 'Javier',
+                lastName: 'Labrador Munoz',
+                phoneNumber: null,
+                address: 'c/ Fuerteventura 27, Jerez, Cadiz, 11406',
+                birthday: '2004-06-25',
+                date_at: '7 days ago'
+            },
+            {
+                id: 5,
+                firstName: 'Javier',
+                lastName: 'Labrador Munoz',
+                phoneNumber: null,
+                address: null,
+                birthday: null,
+                date_at: '8 days ago'
+            }
+        ]
+    });
+});
+// FIN PROBANDO
+
 // Iniciar servidor
 freePort(3000)
     .then(port => {
