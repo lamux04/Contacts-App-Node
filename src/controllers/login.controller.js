@@ -18,6 +18,37 @@ controller.getLogin = function (req, res) {
     }
 };
 
+controller.postLogin = function (req, res) {
+    const session = req.session;
+
+    // Comprobamos si existe el usuario
+    const sql = 'SELECT * FROM users WHERE username = ?';
+    connection.query(sql, [
+        req.body.username
+    ])
+        .then(result => {
+            if (result.length === 0) { // Usuario incorrecto
+                res.render('login', {
+                    stylesheet: 'css/login',
+                    warning: true
+                });
+            } else { // Comprobamos contrasena
+                comparePassword(req.body.password, result[0].password)
+                    .then(result => {
+                        if (result) { // Contrasena correcta
+                            session.userid = req.body.username;
+                            res.redirect('/home');
+                        } else { // Contrasena incorrecta
+                            res.render('login', {
+                                stylesheet: 'css/login',
+                                warning: true
+                            });
+                        }
+                    });
+            }
+        });
+};
+
 // REGISTRO
 controller.getSignup = function (req, res) {
     const session = req.session;
@@ -46,8 +77,8 @@ controller.postSignup = function (req, res) {
                         connection.query(sql, [
                             req.body.username,
                             pass,
-                            req.body.fullname,
-                            req.body.phoneNumber
+                            (req.body.fullname === '') ? null : req.body.fullname,
+                            (req.body.phoneNumber === '') ? null : req.body.phoneNumber
                         ])
                             .then(result => {
                                 // Una vez almacenado

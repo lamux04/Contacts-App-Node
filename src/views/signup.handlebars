@@ -1,5 +1,5 @@
 <h1>Contacts App</h1>
-<form action="/signup" method="post">
+<form action="/signup" method="post" id="form">
     <h2>Sign up</h2>
     <p>¿Ya tienes cuenta? <a href="/login">Sign in</a></p>
     {{#if warning}}
@@ -7,11 +7,11 @@
     {{/if}}
     <label for="username">
         Username
-        <input type="text" name="username" id="username" required>
+        <input type="text" name="username" id="username">
     </label>
     <label for="password">
         Password
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password" id="password">
     </label>
     <label for="fullname">
         Full name
@@ -21,5 +21,6 @@
         Phone number
         <input type="tel" name="phoneNumber" id="phoneNumber">
     </label>
-    <input class="button" type="submit" value="Enviar">
+    <input class="button" type="submit" value="Enviar" id="submitB">
 </form>
+<script src="./js/login.frontend.js"></script>

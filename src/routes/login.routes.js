@@ -5,6 +5,9 @@ const controller = require('../controllers/login.controller');
 // GET request /login
 router.get('/login', controller.getLogin);
 
+// POST request /login
+router.post('/login', controller.postLogin);
+
 // GET request /signup
 router.get('/signup', controller.getSignup);
 
