@@ -1,0 +1,41 @@
+<h1>Contacts App</h1>
+<header>
+    <a href="/home">Volver</a>
+</header>
+<main>
+{{#with contact}}
+    <div class="contact">
+        <div class="name">{{firstName}} {{lastName}}</div>
+        <div class="phone">{{phoneNumber}}</div>
+        <div class="address">{{address}}</div>
+        <div class="birtyday">{{birthday}}</div>
+    </div>
+{{/with}}
+
+<form action="/edit/{{contact.id}}" method="post" id="editContactForm">
+    <h2>Editar contacto</h2>
+    <label for="firstname">
+        Nombre
+        <input type="text" name="firstname" id="firstname">
+    </label>
+    <label for="lastname">
+        Apellidos
+        <input type="text" name="lastname" id="lastname">
+    </label>
+    <label for="phoneNumber">
+        <p id="labelp">Phone number</p>
+        <input type="tel" name="phoneNumber" id="phoneNumber">
+    </label>
+    <label for="address">
+        Direccion
+        <input type="text" name="address" id="address">
+    </label>
+    <label for="birthday">
+        Cumpleaños
+        <input type="date" name="birthday" id="birthday">
+    </label>
+    <input type="submit" value="Enviar" id="appendContactSubmit">
+</form>
+</main>
+
+<script src="/js/edit.frontend.js"></script>

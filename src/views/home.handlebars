@@ -10,7 +10,7 @@
 
 <aside class="append-contact">
     <h2>Agregar contacto</h2>
-    <form action="/append" method="post">
+    <form action="/append" method="post" id="appendContactForm">
         <label for="firstname">
             Nombre
             <input type="text" name="firstname" id="firstname">
@@ -20,7 +20,7 @@
             <input type="text" name="lastname" id="lastname">
         </label>
         <label for="phoneNumber">
-            Phone number
+            <p id="labelp">Phone number</p>
             <input type="tel" name="phoneNumber" id="phoneNumber">
         </label>
         <label for="address">
@@ -31,7 +31,7 @@
             Cumpleaños
             <input type="date" name="birthday" id="birthday">
         </label>
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" id="appendContactSubmit">
     </form>
 </aside>
 
@@ -46,7 +46,7 @@
             <form action="/delete/{{id}}" method="post">
                 <input type="submit" value="Delete">
             </form>
-            <form action="/edit/{{id}}" method="post">
+            <form action="/edit/{{id}}" method="get">
                 <input type="submit" value="Edit">
             </form>
         </div>
