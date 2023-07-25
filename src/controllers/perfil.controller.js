@@ -8,7 +8,6 @@ controller.getPerfil = async function (req, res) {
     // sql perfil
     const sql = 'SELECT username, fullName, phoneNumber FROM users WHERE username = ?';
     const user = await connection.query(sql, [req.session.userid]);
-    console.log(user);
     res.render('perfil', {
         stylesheet: 'css/perfil',
         user: user[0]
