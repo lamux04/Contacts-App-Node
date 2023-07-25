@@ -14,4 +14,7 @@ router.get('/signup', controller.getSignup);
 // POST reques /signup
 router.post('/signup', controller.postSignup);
 
+// POST request /logout
+router.post('/logout', controller.postLogout);
+
 module.exports = router;

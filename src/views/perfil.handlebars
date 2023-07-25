@@ -1,0 +1,16 @@
+<h1>Contacts App</h1>
+<header>
+    <a href="/home" id="backButton">Volver</a>
+</header>
+<main>
+{{#with user}}
+    <div class="info">
+        <div class="username"><span class="tag">Username: </span>{{username}}</div>
+        <div class="fullName"><span class="tag">Nombre completo: </span>{{fullName}}</div>
+        <div class="phoneNumber"><span class="tag">Numero de telefono: </span>{{phoneNumber}}</div>
+    </div>
+    <form action="/logout" method="post">
+        <input type="submit" value="Cerrar sesion">
+    </form>
+{{/with}}
+</main>

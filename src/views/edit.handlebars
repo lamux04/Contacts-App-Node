@@ -10,32 +10,32 @@
         <div class="address">{{address}}</div>
         <div class="birtyday">{{birthday}}</div>
     </div>
-{{/with}}
 
-<form action="/edit/{{contact.id}}" method="post" id="editContactForm">
+<form action="/edit/{{id}}" method="post" id="editContactForm">
     <h2>Editar contacto</h2>
     <label for="firstname">
         Nombre
-        <input type="text" name="firstname" id="firstname">
+        <input type="text" name="firstname" id="firstname" value="{{firstName}}">
     </label>
     <label for="lastname">
         Apellidos
-        <input type="text" name="lastname" id="lastname">
+        <input type="text" name="lastname" id="lastname" value="{{lastName}}">
     </label>
     <label for="phoneNumber">
         <p id="labelp">Phone number</p>
-        <input type="tel" name="phoneNumber" id="phoneNumber">
+        <input type="tel" name="phoneNumber" id="phoneNumber" value="{{phoneNumber}}">
     </label>
     <label for="address">
         Direccion
-        <input type="text" name="address" id="address">
+        <input type="text" name="address" id="address" value="{{address}}">
     </label>
     <label for="birthday">
         Cumpleaños
-        <input type="date" name="birthday" id="birthday">
+        <input type="date" name="birthday" id="birthday" value="{{birthday2}}">
     </label>
     <input type="submit" value="Enviar" id="appendContactSubmit">
 </form>
+{{/with}}
 </main>
 
 <script src="/js/edit.frontend.js"></script>

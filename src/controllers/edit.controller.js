@@ -6,10 +6,15 @@ const { processContact } = require('./home.controller');
 controller.getEdit = async function (req, res) {
     if (!req.session.userid) { res.redirect('/login'); }
     const sql = 'SELECT * FROM contacts WHERE id = ?';
-    const result = await connection.query(sql, req.params.id);
+    let result = await connection.query(sql, req.params.id);
+    const birthday = result[0].birthday;
+    result = result[0];
+    if (birthday) { result.birthday2 = birthday.getFullYear() + '-' + ((birthday.getMonth() + 1) <= 9 ? '0' + (birthday.getMonth() + 1) : (birthday.getMonth() + 1)) + '-' + (birthday.getDate() <= 9 ? '0' + birthday.getDate() : birthday.getDate()); }
+    result = processContact(result);
+    console.log(result);
     res.render('edit', {
         stylesheet: '/css/edit',
-        contact: processContact(result[0])
+        contact: result
     });
 };
 

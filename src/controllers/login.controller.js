@@ -95,4 +95,9 @@ controller.postSignup = function (req, res) {
         });
 };
 
+controller.postLogout = function (req, res) {
+    req.session.destroy();
+    res.redirect('/login');
+};
+
 module.exports = controller;

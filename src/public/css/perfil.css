@@ -1,0 +1,78 @@
+h1 {
+  position: absolute;
+  text-align: center;
+  width: 99vw;
+  z-index: -100;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+header a {
+  text-decoration: none;
+  background-color: #5c9c5d;
+  color: #232940;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+header a:hover {
+  cursor: pointer;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  gap: 15px;
+}
+main .info {
+  border: 3px solid #5c9c5d;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main .tag {
+  color: #a9c1ac;
+  font-size: 20px;
+  font-weight: 400;
+}
+main form input {
+  text-decoration: none;
+  background-color: #5c9c5d;
+  color: #232940;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+main form input:hover {
+  cursor: pointer;
+  background-color: #324e32;
+  transition: background-color 0.3s;
+}
+
+/*# sourceMappingURL=perfil.css.map */
