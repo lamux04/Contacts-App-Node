@@ -11,7 +11,6 @@ controller.getEdit = async function (req, res) {
     result = result[0];
     if (birthday) { result.birthday2 = birthday.getFullYear() + '-' + ((birthday.getMonth() + 1) <= 9 ? '0' + (birthday.getMonth() + 1) : (birthday.getMonth() + 1)) + '-' + (birthday.getDate() <= 9 ? '0' + birthday.getDate() : birthday.getDate()); }
     result = processContact(result);
-    console.log(result);
     res.render('edit', {
         stylesheet: '/css/edit',
         contact: result
