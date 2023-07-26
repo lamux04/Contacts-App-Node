@@ -39,6 +39,7 @@ app.use(require('./routes/login.routes'));
 app.use(require('./routes/home.routes'));
 app.use(require('./routes/edit.routes'));
 app.use(require('./routes/perfil.routes'));
+app.use(require('./routes/api.routes'));
 
 // Iniciar servidor
 freePort(3000)
